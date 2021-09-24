@@ -199,6 +199,15 @@ ul {
   box-shadow: none;
 }
 
+.main-btn:active,
+.main-btn:checked,
+.main-btn:focus {
+  border: 2px solid var(--dark-violet-color);
+  color: var(--dark-blue-color);
+  background-color: var(--section-bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+}
+
 .rocket {
   position: absolute;
 }
