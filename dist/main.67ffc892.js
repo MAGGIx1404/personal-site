@@ -15837,8 +15837,6 @@ var _parallaxJs = _interopRequireDefault(require("parallax-js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import resorceses from node-modules
-// import * as THREE from "three";
-// import hoverEffect from "hover-effect";
 // nav flexibility
 var nav = document.getElementById("nav");
 window.addEventListener("scroll", function () {
@@ -15850,15 +15848,71 @@ window.addEventListener("scroll", function () {
 }); // parallax effect in banner
 
 var scene = document.getElementById("scene");
-var scene_two = document.getElementById("scene-2");
-var scene_three = document.getElementById("scene-3");
 var scene_four = document.getElementById("scene-4");
 var scene_five = document.getElementById("scene-5");
 var parallaxInstance = new _parallaxJs.default(scene);
-var parallaxInstance_two = new _parallaxJs.default(scene_two);
-var parallaxInstance_three = new _parallaxJs.default(scene_three);
 var parallaxInstance_four = new _parallaxJs.default(scene_four);
-var parallaxInstance_five = new _parallaxJs.default(scene_five); // about section picture hover effect
+var parallaxInstance_five = new _parallaxJs.default(scene_five); // smooth scroll
+
+_all.gsap.registerPlugin(_all.ScrollTrigger, _all.ScrollToPlugin);
+
+var container = document.querySelector("#scroll-container");
+var height;
+
+function setHeight() {
+  height = container.clientHeight;
+  document.body.style.height = height + "px";
+}
+
+_all.ScrollTrigger.addEventListener("refreshInit", setHeight); // smooth scrolling container
+
+
+_all.gsap.to(container, {
+  y: function y() {
+    return -(height - document.documentElement.clientHeight);
+  },
+  ease: "none",
+  scrollTrigger: {
+    trigger: document.body,
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 1,
+    invalidateOnRefresh: true
+  }
+});
+
+var btn_nav = document.querySelectorAll(".nav-btn");
+
+function setupLinks(scroller) {
+  var linkElements = _all.gsap.utils.toArray(btn_nav),
+      linkTargets = linkElements.map(function (e) {
+    return document.querySelector(e.getAttribute("href"));
+  }),
+      linkPositions = [],
+      calculatePositions = function calculatePositions() {
+    var offset = _all.gsap.getProperty(scroller, "y");
+
+    linkTargets.forEach(function (e, i) {
+      return linkPositions[i] = e.getBoundingClientRect().top - offset;
+    });
+  };
+
+  linkElements.forEach(function (element, i) {
+    element.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      _all.gsap.to(window, {
+        scrollTo: linkPositions[i],
+        ease: "power4",
+        overwrite: true
+      });
+    });
+  });
+
+  _all.ScrollTrigger.addEventListener("refresh", calculatePositions);
+}
+
+setupLinks(container);
 },{"gsap/all":"node_modules/gsap/all.js","parallax-js":"node_modules/parallax-js/dist/parallax.js"}],"C:/Users/yash/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -15887,7 +15941,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53774" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49988" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
