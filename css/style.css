@@ -145,6 +145,7 @@ ul {
 .mini-title {
   font-size: var(--font-l-h3);
   font-weight: 600;
+  color: var(--dark-blue-color);
   line-height: 1.5;
 }
 
@@ -162,8 +163,36 @@ ul {
   color: var(--light-color);
   background-color: var(--dark-violet-color);
   padding: 0.7rem 3rem;
-  box-shadow: 6px 6px 0px violet;
+  box-shadow: 6px 6px 0px violet, 5px 5px 0px violet, 4px 4px 0px violet,
+    3px 3px 0px violet, 2px 2px 0px violet, 1px 1px 0px violet;
   border-radius: 5px;
+}
+
+.btn-3 {
+  font-size: var(--font-extra-small-a-span);
+  font-weight: 500;
+  color: var(--dark-violet-color);
+  z-index: 2;
+  padding: 0.5rem;
+}
+
+.btn-3:hover {
+  color: var(--light-color);
+}
+
+.btn-3::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--dark-violet-color);
+  z-index: -1;
+}
+
+.btn-3:hover::after {
+  height: 100%;
 }
 
 .main-btn:hover {
@@ -512,4 +541,88 @@ nav .btn-2:hover {
   top: 50%;
   left: -8.5%;
   transform: translateY(-50%);
+}
+
+/* project section */
+.project-section {
+  width: 100%;
+  background-color: var(--section-bg-color);
+}
+
+.project-section .container {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.project-section .row {
+  margin: 2rem 0 4rem 0;
+}
+
+.project-section .row .project-card {
+  flex: 0 0 32%;
+  max-width: 32%;
+  overflow: hidden;
+  max-height: 40rem;
+  background-color: var(--light-color);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #dddddd;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  text-align: left;
+}
+
+.project-section .row .project-card:hover {
+  box-shadow: inset 0 0 10px #c7c7c7;
+  background-color: var(--section-bg-color);
+}
+
+.project-section .row .project-card:hover .img-box {
+  box-shadow: 0 0 5px #afafaf;
+}
+
+.project-section .row .project-card:hover .img-box img {
+  transform: scale(1.2);
+}
+
+.project-section .row .project-card .img-box {
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.project-section .row .project-card .img-box img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.8s ease;
+}
+
+.project-section .row .project-card h3 {
+  margin-top: 1rem;
+}
+
+.project-section .row .project-card p {
+  margin: 1rem 0;
+}
+
+.project-section .laptop {
+  z-index: 10;
+  top: -15%;
+  left: 30%;
+  animation: upDown 1.7s linear infinite alternate-reverse;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(-0.2rem);
+  }
+  50% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(0.2rem);
+  }
 }
