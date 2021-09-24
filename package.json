@@ -18,7 +18,7 @@
   "homepage": "https://github.com/MAGGIx1404/personal-site#readme",
   "dependencies": {
     "gsap": "^3.7.1",
-    "locomotive-scroll": "^4.1.2",
-    "parallax-js": "^3.1.0"
+    "parallax-js": "^3.1.0",
+    "three": "^0.132.2"
   }
 }
