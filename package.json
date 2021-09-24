@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAGGIx1404/personal-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MAGGIx1404/personal-site/issues"
+  },
+  "homepage": "https://github.com/MAGGIx1404/personal-site#readme",
+  "dependencies": {
+    "gsap": "^3.7.1",
+    "locomotive-scroll": "^4.1.2",
+    "parallax-js": "^3.1.0"
+  }
+}
