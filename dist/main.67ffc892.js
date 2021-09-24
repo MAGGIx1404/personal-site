@@ -15854,13 +15854,11 @@ var scene_two = document.getElementById("scene-2");
 var scene_three = document.getElementById("scene-3");
 var scene_four = document.getElementById("scene-4");
 var scene_five = document.getElementById("scene-5");
-var scene_six = document.getElementById("scene-6");
 var parallaxInstance = new _parallaxJs.default(scene);
 var parallaxInstance_two = new _parallaxJs.default(scene_two);
 var parallaxInstance_three = new _parallaxJs.default(scene_three);
 var parallaxInstance_four = new _parallaxJs.default(scene_four);
-var parallaxInstance_five = new _parallaxJs.default(scene_five);
-var parallaxInstance_six = new _parallaxJs.default(scene_six); // about section picture hover effect
+var parallaxInstance_five = new _parallaxJs.default(scene_five); // about section picture hover effect
 },{"gsap/all":"node_modules/gsap/all.js","parallax-js":"node_modules/parallax-js/dist/parallax.js"}],"C:/Users/yash/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
