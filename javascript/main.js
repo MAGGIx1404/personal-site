@@ -5,8 +5,14 @@ import {
   Draggable,
   MotionPathPlugin,
   ScrollToPlugin,
+  TweenLite,
+  TweenMax,
+  CSSPlugin,
+  EasePack,
+  Expo,
 } from "gsap/all";
 import Parallax from "parallax-js";
+import AOS from "aos";
 
 // nav flexibility
 const nav = document.getElementById("nav");
@@ -90,4 +96,97 @@ function setupLinks(scroller) {
 
 setupLinks(container);
 
-// text reveal on scroll
+// loading animation
+
+TweenLite.to(".loader-slide-2", 2, {
+  y: "-100%",
+  opacity: 0,
+  delay: 2,
+  ease: Expo.easeInOut,
+});
+
+TweenLite.to(".loader-slide-1", 2, {
+  y: "-100%",
+  opacity: 0,
+  delay: 2.4,
+  ease: Expo.easeInOut,
+});
+
+TweenLite.from(".banner .banner-content h1", 1, {
+  opacity: 0,
+  x: -100,
+  delay: 3,
+  ease: Expo.ease,
+});
+
+TweenLite.from(".banner .banner-content p", 1, {
+  opacity: 0,
+  x: -100,
+  delay: 3.4,
+  ease: Expo.ease,
+});
+
+TweenLite.from(".banner .banner-content a", 1, {
+  opacity: 0,
+  x: -100,
+  delay: 3.8,
+  ease: Expo.ease,
+});
+
+TweenLite.from(".banner .banner-pic img", 1, {
+  opacity: 0,
+  delay: 4.2,
+  ease: Expo.ease,
+});
+
+// loader setting
+const loader_container = document.getElementById("loader");
+
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    loader_container.classList.add("close");
+  }, 4500);
+  AOS.init();
+});
+
+// scroll animation
+gsap.utils.toArray(".revealUp").forEach(function (elem) {
+  ScrollTrigger.create({
+    trigger: elem,
+    start: "top 95%",
+    end: "bottom 5%",
+    // markers: true,
+    onEnter: function () {
+      gsap.fromTo(
+        elem,
+        { y: 100, autoAlpha: 0 },
+        {
+          duration: 1.25,
+          y: 0,
+          autoAlpha: 1,
+          ease: "back",
+          overwrite: "auto",
+        }
+      );
+    },
+    onLeave: function () {
+      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+    },
+    onEnterBack: function () {
+      gsap.fromTo(
+        elem,
+        { y: -100, autoAlpha: 0 },
+        {
+          duration: 1.25,
+          y: 0,
+          autoAlpha: 1,
+          ease: "back",
+          overwrite: "auto",
+        }
+      );
+    },
+    onLeaveBack: function () {
+      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+    },
+  });
+});

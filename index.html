@@ -5,10 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JEET</title>
+    <!-- aos stylesheet -->
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
     <!-- custom stylesheet file -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+
+    <!-- loader start-->
+    <div class="loader" id="loader">
+      <div class="loader-slide-2">
+        <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_7fy2yzzs.json"  background="transparent"  speed="4"  style="width: 500px; height: auto;"  loop  autoplay></lottie-player>
+        <h1 class="sub-title">Wait a Moment...</h1>
+      </div>
+      <div class="loader-slide-1"></div>
+    </div>
+    <!-- loader end -->
     <!-- navbar big screen (pc and laptop) -->
     <nav class="nav" id="nav">
       <div class="container row">
@@ -20,7 +32,7 @@
           <a href="#project" class="nav-btn">Project</a>
           <a href="#contact" class="nav-btn">contact</a>
         </div>
-        <a href="#" class="btn-2">Contact</a>
+        <a href="#contact" class="btn-2">Contact</a>
       </div>
     </nav>
     <!-- navbar big screen end (pc and laptop) -->
@@ -36,8 +48,10 @@
               and Designer
             </h1>
             <p class="paragraph">
-              I'm Jeet - a software developer born and raise in India, who makes
-              stuff for web.
+              <span>
+                I'm Jeet - a software developer born and raise in India, who makes
+                stuff for web.
+              </span>
             </p>
             <a href="#" class="main-btn"> Get In Touch </a>
           </div>
@@ -62,29 +76,29 @@
           <img src="./images/rocket-2.png" data-depth="0.6" alt="error" class="rocket-2-body">
         </div>
         <div class="container">
-          <h1 class="sub-title">
+          <h1 class="sub-title revealUp">
             About Me
           </h1>
           <div class="row">
             <div class="about-content">
-              <p class="paragraph">
+              <p class="paragraph revealUp">
                 Hello, My name is Jeet and i am a developer and designer from India, who build beautiful things for everyone.
               </p>
-              <p class="paragraph">
-                I love 3d and animations. Currently, i am learning about Webgl and 3D experiences in web. 
+              <p class="paragraph revealUp">
+                I love 3D and animations. Currently, i am learning about Webgl and 3D experiences in web. 
               </p>
             </div>
             <div class="about-pic">
               <div class="img-box">
-                <img src="./images/about-1.svg" alt="error" class="about-img">
+                <img src="./images/about-1.svg" alt="error" class="about-img revealUp">
               </div>
               <img src="./images/about.png" alt="error" class="about-dog rocket">
             </div>
           </div>
-          <div class="shape-1 rocket" id="scene-4">
+          <div class="shape-1 rocket revealUp" id="scene-4">
             <img src="./images/circle.png" alt="error" data-depth="0.6">
           </div>
-          <div class="shape-2 rocket" id="scene-5">
+          <div class="shape-2 rocket revealUp" id="scene-5">
             <img src="./images/ball.png" alt="error" data-depth="0.6">
           </div>
         </div>
@@ -93,28 +107,29 @@
       <!-- info section -->
       <div class="info-section section" id="info">
         <div class="container">
-          <div class="rocket rocket-3">
-            <img src="./images/rocket-3.png" alt="error" class="rocket-3-body rocket">
+          <div class="rocket rocket-3 revealUp">
+            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_7fy2yzzs.json"  background="transparent"  speed="4"  style="width: 150px; height: auto;"  loop  autoplay></lottie-player>
+            <!-- <img src="./images/rocket-3.png" alt="error" class="rocket-3-body rocket"> -->
           </div>
           <img src="./images/things.png" alt="error" class="hippo rocket">
-          <h1 class="sub-title">
+          <h1 class="sub-title revealUp">
             Things I Know
           </h1>
           <div class="row">
             <div class="tools">
-              <div class="tools-inner">
-                <h3 class="mini-title">Design Tools</h3>
-                <p class="paragraph">Design tools that i enjoy</p>
+              <div class="tools-inner revealUp">
+                <h3 class="mini-title revealUp">Design Tools</h3>
+                <p class="paragraph revealUp">Design tools that i enjoy</p>
                 <div class="list">
-                  <div class="item">
+                  <div class="item revealUp">
                     <img src="./icons/figma.svg" alt="error" class="icon">
                     <p class="paragraph">Figma</p>
                   </div>
-                  <div class="item">
+                  <div class="item revealUp">
                     <img src="./icons/xd.svg" alt="error" class="icon">
                     <p class="paragraph">Adobe XD</p>
                   </div>
-                  <div class="item">
+                  <div class="item revealUp">
                     <img src="./icons/blender.svg" alt="error" class="icon">
                     <p class="paragraph">Blender</p>
                   </div>
@@ -122,35 +137,35 @@
               </div>
             </div>
             <div class="tools">
-              <div class="tools-inner">
-                <h3 class="mini-title">Front-end Development</h3>
-                <p class="paragraph">I love to bring ideas to life</p>
+              <div class="tools-inner revealUp">
+                <h3 class="mini-title revealUp">Front-end Development</h3>
+                <p class="paragraph revealUp">I love to bring ideas to life</p>
                 <div class="list">
-                  <div class="item">
+                  <div class="item revealUp">
                     <img src="./icons/html.svg" alt="error" class="icon">
                     <p class="paragraph">HTML 5</p>
                   </div>
-                  <div class="item">
+                  <div class="item revealUp">
                     <img src="./icons/css.png" alt="error" class="icon">
                     <p class="paragraph">CSS 3</p>
                   </div>
-                  <div class="item">
+                  <div class="item revealUp">
                     <img src="./icons/scss.svg" alt="error" class="icon">
                     <p class="paragraph">SCSS</p>
                   </div>
-                  <div class="item">
+                  <div class="item revealUp">
                     <img src="./icons/js.png" alt="error" class="icon">
                     <p class="paragraph">Javascript</p>
                   </div>
-                  <div class="item">
+                  <div class="item revealUp">
                     <img src="./icons/react.svg" alt="error" class="icon">
                     <p class="paragraph">React</p>
                   </div>
-                  <div class="item">
+                  <div class="item revealUp">
                     <img src="./icons/vue.svg" alt="error" class="icon">
                     <p class="paragraph">Vue</p>
                   </div>
-                  <div class="item">
+                  <div class="item revealUp">
                     <img src="./icons/webgl.svg" alt="error" class="icon">
                     <p class="paragraph">WebGl</p>
                   </div>
@@ -164,10 +179,10 @@
       <!-- project section -->
         <div class="project-section section" id="project">
           <div class="container">
-            <img src="./images/laptop.png" alt="error" class="laptop rocket">
-            <h1 class="sub-title">My Project</h1>
+            <img src="./images/laptop.png" alt="error" class="laptop rocket revealUp">
+            <h1 class="sub-title revealUp">My Projects</h1>
             <div class="row">
-              <div class="project-card">
+              <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="300">
                 <div class="img-box">
                   <img src="./images/projects/pic-1.png" alt="error" class="project-pic">
                 </div>
@@ -175,7 +190,7 @@
                 <p class="paragraph">Designed the interface of a Uplsy like Illustration, Icons, Contents.</p>
                 <a href="#" class="btn-3">Details</a>
               </div>
-              <div class="project-card">
+              <div class="project-card" data-aos="fade-up" data-aos-delay="350" data-aos-duration="300">
                 <div class="img-box">
                   <img src="./images/projects/pic-3.png" alt="error" class="project-pic">
                 </div>
@@ -183,7 +198,7 @@
                 <p class="paragraph">Personal site of my Client. in project using little bite of Three js.</p>
                 <a href="#" class="btn-3">Details</a>
               </div>
-              <div class="project-card">
+              <div class="project-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="300">
                 <div class="img-box">
                   <img src="./images/projects/pic-2.png" alt="error" class="project-pic">
                 </div>
@@ -192,13 +207,13 @@
                 <a href="#" class="btn-3">Details</a>
               </div>
             </div>
-              <a href="#" class="main-btn">
+              <a href="#" class="main-btn revealUp">
                 Show More
               </a>
-              <div class="shape-3 rocket" id="scene-2">
+              <div class="shape-3 rocket revealUp" id="scene-2">
                 <img src="./images/circle.png" alt="error" data-depth="0.6">
               </div>
-              <div class="shape-4 rocket" id="scene-3">
+              <div class="shape-4 rocket revealUp" id="scene-3">
                 <img src="./images/ball.png" alt="error" data-depth="0.6">
               </div>
           </div>
@@ -207,28 +222,28 @@
       <!-- contact section -->
       <div class="contact-section section" id="contact">
         <div class="container">
-            <h1 class="sub-title">Get In Touch</h1>
-            <p class="paragraph">I’m currently a student so, right now i am not looking for any opportunities, but my inbox is  always open. Just say Hi.</p>
-            <a href="#" class="main-btn">Say Hi</a>  
-            <img src="./images/trade.png" alt="error" class="trade rocket">  
-            <img src="./images/rocket-4.png" alt="error" class="rocket-4 rocket">
+            <h1 class="sub-title revealUp">Get In Touch</h1>
+            <p class="paragraph revealUp">I’m currently a student so, right now i am not looking for any opportunities, but my inbox is  always open. Just say Hi.</p>
+            <a href="#" class="main-btn revealUp">Say Hi</a>  
+            <img src="./images/trade.png" alt="error" class="trade rocket revealUp">  
+            <img src="./images/rocket-4.png" alt="error" class="rocket-4 rocket revealUp">
             <img src="./images/touch.png" alt="error" class="rocket horse">
-            <img src="./images/touch-icon.png" alt="error" class="touch rocket">
+            <img src="./images/touch-icon.png" alt="error" class="touch rocket revealUp">
         </div>
       </div>
       <!-- contact section end -->
       <!-- footer -->
       <footer class="footer" id="foooter">
         <div class="container">
-          <img src="./images/footer.png" alt="error" data-depth="0.8" class="footer-img rocket">
-          <img src="./images/rocket-5.png" alt="" class="rocket-5 rocket">
-          <img src="./images/rocket-5.png" alt="" class="rocket-6 rocket">
+          <img src="./images/footer.png" alt="error" data-depth="0.8" class="footer-img rocket revealUp">
+          <img src="./images/rocket-5.png" alt="" class="rocket-5 rocket revealUp">
+          <img src="./images/rocket-5.png" alt="" class="rocket-6 rocket revealUp">
           <div class="footer-links">
-            <a href="#" class="footer-btn"><img src="./icons/facebook.png" alt="error" class="footer-btn-img"></a>
-            <a href="#" class="footer-btn"><img src="./icons/instagram.png" alt="error" class="footer-btn-img"></a>
-            <a href="#" class="footer-btn"><img src="./icons/Dribble.png" alt="error" class="footer-btn-img"></a>
-            <a href="#" class="footer-btn"><img src="./icons/behance.png" alt="error" class="footer-btn-img"></a>
-            <a href="#" class="footer-btn"><img src="./icons/github.png" alt="error" class="footer-btn-img"></a>
+            <a href="#" class="footer-btn" data-aos="fade-up" data-aos-delay="100"><img src="./icons/facebook.png" alt="error" class="footer-btn-img"></a>
+            <a href="#" class="footer-btn" data-aos="fade-up" data-aos-delay="150"><img src="./icons/instagram.png" alt="error" class="footer-btn-img"></a>
+            <a href="#" class="footer-btn" data-aos="fade-up" data-aos-delay="200"><img src="./icons/Dribble.png" alt="error" class="footer-btn-img"></a>
+            <a href="#" class="footer-btn" data-aos="fade-up" data-aos-delay="250"><img src="./icons/behance.png" alt="error" class="footer-btn-img"></a>
+            <a href="#" class="footer-btn" data-aos="fade-up" data-aos-delay="300"><img src="./icons/github.png" alt="error" class="footer-btn-img"></a>
           </div>
           <h3 class="mini-title">
             Design and Built By Jeet R.
@@ -242,6 +257,9 @@
     </div>
     </div>
     <!-- wrapper end -->  
+
+    <!-- lottie animation -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- custom script file -->
     <script src="./javascript/main.js"></script>
   </body>
