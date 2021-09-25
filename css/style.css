@@ -87,6 +87,8 @@ ul {
   width: 100%;
 }
 
+/* scroll majestry */
+
 /* utilities classes */
 
 .container {
@@ -297,14 +299,15 @@ nav .btn-2:hover {
   width: 100%;
   height: 100%;
   min-height: 75vh;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right bottom,
     #fff2db,
     #ffebe0,
     #ffe7eb,
     #fde6f6,
     #ebe8fd
-  );
+  ); */
+  background: linear-gradient(102.38deg, #fff2db 0%, #ebe8fd 100%);
   border-radius: 20px;
   box-shadow: 0 0 10px #f7f7f7;
 }
@@ -328,6 +331,7 @@ nav .btn-2:hover {
 .banner .banner-pic img {
   width: 100%;
   height: 100%;
+  animation: upDown 1.6s linear infinite alternate-reverse;
 }
 
 .banner .rocket-container-1 {
@@ -541,9 +545,9 @@ nav .btn-2:hover {
 }
 
 .info-section .rocket-3 img {
-  left: 50%;
+  left: 40%;
   top: 0;
-  transform: translateX(-50%) rotate(30deg);
+  animation: upDown 1.7s linear infinite alternate-reverse;
 }
 
 .info-section .hippo {
@@ -568,7 +572,7 @@ nav .btn-2:hover {
 }
 
 .project-section .row {
-  margin: 2rem 0 4rem 0;
+  margin: 4rem 0 4rem 0;
 }
 
 .project-section .row .project-card {
@@ -635,3 +639,137 @@ nav .btn-2:hover {
     transform: translateY(0.2rem);
   }
 }
+
+.project-section .shape-3 {
+  top: 10%;
+  animation: shape 18s linear infinite;
+  left: -10%;
+}
+
+.project-section .shape-4 {
+  animation: shape 18s linear infinite;
+  bottom: 0%;
+  right: -6%;
+}
+
+/* contact section */
+.contact-section {
+  width: 100%;
+}
+
+.contact-section .container {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* background-image: linear-gradient(
+    to right bottom,
+    #fff2db,
+    #ffebe0,
+    #ffe7eb,
+    #fde6f6,
+    #ebe8fd
+  ); */
+  background: linear-gradient(94.33deg, #f3f0ff 0.58%, #fff2db 100%);
+  width: 100%;
+  border-radius: 20px;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.contact-section p {
+  margin: 2rem 0 6rem 0;
+  width: 70%;
+  position: relative;
+  z-index: 3;
+}
+
+.contact-section .rocket-4 {
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) rotate(10deg);
+  z-index: 1;
+}
+
+.contact-section .horse {
+  top: -32%;
+  width: 12rem;
+}
+
+.contact-section .touch {
+  top: -25%;
+  right: 0;
+  animation: upDown 2s linear infinite alternate-reverse;
+}
+
+.contact-section .trade {
+  bottom: 10%;
+  animation: upDown 2s linear infinite alternate-reverse;
+  left: 5%;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  padding: 4rem 0;
+  background: linear-gradient(91.9deg, #c9ffff 0.11%, #ffe4f9 100%);
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+footer .footer-links a img {
+  width: 4rem;
+  transition: all 0.5s ease;
+}
+
+footer .footer-links a:hover img {
+  transform: scale(1.2);
+}
+
+footer h3 {
+  margin: 1rem 0;
+}
+
+footer .footer-img {
+  top: -90%;
+  animation: upDown 1.7s linear infinite alternate-reverse;
+}
+
+footer .rocket-5 {
+  left: -10%;
+  top: 0;
+  animation-delay: 0.2s;
+  animation: upDown 1.4s linear infinite alternate-reverse;
+}
+
+footer .rocket-6 {
+  right: -10%;
+  top: -70%;
+  animation: jeet 1.6s linear infinite alternate-reverse;
+}
+
+@keyframes jeet {
+  0% {
+    transform: translateY(-0.2rem) rotateY(180deg);
+  }
+  50% {
+    transform: translateY(0) rotateY(180deg);
+  }
+  100% {
+    transform: translateY(0.2rem) rotateY(180deg);
+  }
+}
+
+/* end */

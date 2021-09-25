@@ -15848,9 +15848,13 @@ window.addEventListener("scroll", function () {
 }); // parallax effect in banner
 
 var scene = document.getElementById("scene");
+var scene_two = document.getElementById("scene-2");
+var scene_three = document.getElementById("scene-3");
 var scene_four = document.getElementById("scene-4");
 var scene_five = document.getElementById("scene-5");
 var parallaxInstance = new _parallaxJs.default(scene);
+var parallaxInstance_two = new _parallaxJs.default(scene_two);
+var parallaxInstance_three = new _parallaxJs.default(scene_three);
 var parallaxInstance_four = new _parallaxJs.default(scene_four);
 var parallaxInstance_five = new _parallaxJs.default(scene_five); // smooth scroll
 
@@ -15879,7 +15883,8 @@ _all.gsap.to(container, {
     scrub: 1,
     invalidateOnRefresh: true
   }
-});
+}); // nav btns initialize for smooth transition
+
 
 var btn_nav = document.querySelectorAll(".nav-btn");
 
@@ -15912,7 +15917,7 @@ function setupLinks(scroller) {
   _all.ScrollTrigger.addEventListener("refresh", calculatePositions);
 }
 
-setupLinks(container);
+setupLinks(container); // text reveal on scroll
 },{"gsap/all":"node_modules/gsap/all.js","parallax-js":"node_modules/parallax-js/dist/parallax.js"}],"C:/Users/yash/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -15941,7 +15946,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60106" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59776" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
