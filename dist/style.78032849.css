@@ -849,6 +849,12 @@ footer .rocket-6 {
   background: linear-gradient(91.9deg, #c9ffff 0.11%, #ffe4f9 100%);
 }
 
+.loader-animation,
+.loader-animation-2 {
+  transition: all 0.5s ease;
+  position: absolute;
+}
+
 /* end */
 
 

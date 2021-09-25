@@ -65,7 +65,7 @@ gsap.to(container, {
 
 // nav btns initialize for smooth transition
 
-var btn_nav = document.querySelectorAll(".nav-btn");
+var btn_nav = document.querySelectorAll(".top-btn");
 
 function setupLinks(scroller) {
   let linkElements = gsap.utils.toArray(btn_nav),
@@ -109,6 +109,11 @@ TweenLite.to(".loader-slide-1", 2, {
   y: "-100%",
   opacity: 0,
   delay: 2.4,
+  ease: Expo.easeInOut,
+});
+
+TweenLite.from(".loader-animation", 1.2, {
+  opacity: 0,
   ease: Expo.easeInOut,
 });
 

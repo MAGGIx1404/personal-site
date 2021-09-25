@@ -40,6 +40,6 @@ for (let i = 0; i < anchors.length; i++) {
 
     setTimeout(() => {
       window.location.href = target;
-    }, 2500);
+    }, 2000);
   });
 }
