@@ -25,6 +25,18 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// forward btn setting
+
+const forward_btn = document.getElementById("forward-btn");
+
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > 200) {
+    forward_btn.classList.add("active");
+  } else {
+    forward_btn.classList.remove("active");
+  }
+});
+
 // parallax effect in banner
 
 var scene = document.getElementById("scene");

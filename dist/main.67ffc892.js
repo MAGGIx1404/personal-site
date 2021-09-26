@@ -15852,6 +15852,15 @@ window.addEventListener("scroll", function () {
   } else {
     nav.classList.remove("active");
   }
+}); // forward btn setting
+
+var forward_btn = document.getElementById("forward-btn");
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > 200) {
+    forward_btn.classList.add("active");
+  } else {
+    forward_btn.classList.remove("active");
+  }
 }); // parallax effect in banner
 
 var scene = document.getElementById("scene");
@@ -16058,7 +16067,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59109" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54204" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
