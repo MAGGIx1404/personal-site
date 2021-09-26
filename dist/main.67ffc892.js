@@ -15938,46 +15938,45 @@ setupLinks(container); // loading animation
 _all.TweenLite.to(".loader-slide-2", 2, {
   y: "-100%",
   opacity: 0,
-  delay: 2,
   ease: _all.Expo.easeInOut
 });
 
 _all.TweenLite.to(".loader-slide-1", 2, {
   y: "-100%",
   opacity: 0,
-  delay: 2.4,
+  delay: 0.4,
   ease: _all.Expo.easeInOut
 });
 
-_all.TweenLite.from(".loader-animation", 1.2, {
-  opacity: 0,
+_all.TweenLite.to(".loader-animation", 1.2, {
+  opacity: 1,
   ease: _all.Expo.easeInOut
 });
 
 _all.TweenLite.from(".banner .banner-content h1", 1, {
   opacity: 0,
   x: -100,
-  delay: 3,
+  delay: 0.8,
   ease: _all.Expo.ease
 });
 
 _all.TweenLite.from(".banner .banner-content p", 1, {
   opacity: 0,
   x: -100,
-  delay: 3.4,
+  delay: 1.2,
   ease: _all.Expo.ease
 });
 
 _all.TweenLite.from(".banner .banner-content a", 1, {
   opacity: 0,
   x: -100,
-  delay: 3.8,
+  delay: 1.6,
   ease: _all.Expo.ease
 });
 
 _all.TweenLite.from(".banner .banner-pic img", 1, {
   opacity: 0,
-  delay: 4.2,
+  delay: 2,
   ease: _all.Expo.ease
 }); // loader setting
 
@@ -16067,7 +16066,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54204" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61699" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

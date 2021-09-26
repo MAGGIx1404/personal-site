@@ -236,14 +236,15 @@ nav {
   width: 100%;
   height: auto;
   transition: all 0.5s ease;
-  z-index: 100;
   background-color: var(--light-color);
+  z-index: 2;
 }
 
 nav.active {
   box-shadow: 0 0 20px #dddddd;
   transition: all 0.5s ease;
   padding: 1rem;
+  z-index: 10;
 }
 
 nav nav .container,
@@ -308,8 +309,8 @@ nav .btn-2:hover {
 .banner .container,
 .banner .row {
   width: 100%;
-  height: 100%;
-  min-height: 75vh;
+  /* height: 100%; */
+  /* min-height: 75vh; */
   /* background-image: linear-gradient(
     to right bottom,
     #fff2db,
@@ -321,6 +322,10 @@ nav .btn-2:hover {
   background: linear-gradient(102.38deg, #fff2db 0%, #ebe8fd 100%);
   border-radius: 20px;
   box-shadow: 0 0 10px #f7f7f7;
+  padding: 2rem 0;
+  position: absolute;
+  bottom: 40%;
+  transform: translateY(40%);
 }
 
 .banner .banner-content {
@@ -825,11 +830,21 @@ footer .rocket-6 {
   justify-content: center;
 }
 
+.loader .loader-slide-2 .loader-animation {
+  width: 600px;
+  position: absolute;
+  top: 15%;
+  opacity: 0;
+}
+
 .loader .loader-slide-2 h1 {
   font-weight: 400;
   letter-spacing: 1px;
   margin-top: 2rem;
   text-align: center;
+  /* position: absolute;
+  top: 50%;
+  transform: translateY(-50%); */
 }
 
 /* overlay */
@@ -853,12 +868,6 @@ footer .rocket-6 {
   background: linear-gradient(91.9deg, #c9ffff 0.11%, #ffe4f9 100%);
 }
 
-.loader-animation,
-.loader-animation-2 {
-  transition: all 0.5s ease;
-  position: absolute;
-}
-
 /* forward btn */
 
 .forward-btn {
@@ -876,6 +885,61 @@ footer .rocket-6 {
 .forward-btn.active {
   transform: translateY(0);
 }
+
+/* svg animation */
+
+.loader-animation img {
+  position: absolute;
+  width: 100%;
+}
+.rocket-loader {
+  animation: rocket 2s linear infinite alternate-reverse;
+}
+.fog-main {
+  animation: rocket 2s linear infinite alternate-reverse;
+}
+.fog-top {
+  animation: fog 3s ease-in-out infinite;
+}
+.fog-bottom {
+  animation: fog-1 3s ease-in-out infinite;
+}
+@keyframes rocket {
+  0% {
+    transform: translateY(-0.3rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0.3rem);
+  }
+}
+@keyframes fog {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-0.3rem);
+  }
+}
+@keyframes fog-1 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0.3rem);
+  }
+}
+
 /* end */
 
 

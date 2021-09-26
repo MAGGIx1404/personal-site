@@ -113,46 +113,45 @@ setupLinks(container);
 TweenLite.to(".loader-slide-2", 2, {
   y: "-100%",
   opacity: 0,
-  delay: 2,
   ease: Expo.easeInOut,
 });
 
 TweenLite.to(".loader-slide-1", 2, {
   y: "-100%",
   opacity: 0,
-  delay: 2.4,
+  delay: 0.4,
   ease: Expo.easeInOut,
 });
 
-TweenLite.from(".loader-animation", 1.2, {
-  opacity: 0,
+TweenLite.to(".loader-animation", 1.2, {
+  opacity: 1,
   ease: Expo.easeInOut,
 });
 
 TweenLite.from(".banner .banner-content h1", 1, {
   opacity: 0,
   x: -100,
-  delay: 3,
+  delay: 0.8,
   ease: Expo.ease,
 });
 
 TweenLite.from(".banner .banner-content p", 1, {
   opacity: 0,
   x: -100,
-  delay: 3.4,
+  delay: 1.2,
   ease: Expo.ease,
 });
 
 TweenLite.from(".banner .banner-content a", 1, {
   opacity: 0,
   x: -100,
-  delay: 3.8,
+  delay: 1.6,
   ease: Expo.ease,
 });
 
 TweenLite.from(".banner .banner-pic img", 1, {
   opacity: 0,
-  delay: 4.2,
+  delay: 2,
   ease: Expo.ease,
 });
 
