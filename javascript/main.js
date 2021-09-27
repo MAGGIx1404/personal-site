@@ -161,7 +161,7 @@ const loader_container = document.getElementById("loader");
 window.addEventListener("load", function () {
   setTimeout(() => {
     loader_container.classList.add("close");
-  }, 4500);
+  }, 3000);
   AOS.init();
 });
 

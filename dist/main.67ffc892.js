@@ -15985,7 +15985,7 @@ var loader_container = document.getElementById("loader");
 window.addEventListener("load", function () {
   setTimeout(function () {
     loader_container.classList.add("close");
-  }, 4500);
+  }, 3000);
 
   _aos.default.init();
 }); // scroll animation
@@ -16066,7 +16066,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63624" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62195" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

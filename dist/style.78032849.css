@@ -591,6 +591,7 @@ nav .btn-2:hover {
 }
 
 .project-section .row {
+  overflow: hidden;
   margin: 4rem 0 4rem 0;
 }
 

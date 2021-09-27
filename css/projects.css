@@ -21,50 +21,35 @@
 
 /* heading */
 
-.heading,
 .heading .container {
   width: 100%;
-  padding: 5rem 0 3rem 0;
+  padding: 10rem 0 6rem 0;
   text-align: center;
+}
+
+.heading img {
+  bottom: -8%;
+}
+
+.heading .pet-1 {
+  left: 10%;
+}
+
+.heading .pet-2 {
+  right: 10%;
 }
 
 /* projects */
 
-.frame__title {
-  font-size: 1rem;
-  margin: 0;
-  font-weight: 400;
-}
-
-.frame__links,
-.frame__demos,
-.frame__demos {
-  margin: 0.5rem 0;
-}
-
-.frame__demos a {
-  border-bottom: 1px solid currentColor;
-  transition: 0.2s border-color;
-}
-
-.frame__demos a:hover,
-.frame__demos a:focus {
-  border-color: transparent;
-}
-
-.frame__links a:not(:last-child),
-.frame__demos a:not(:last-child) {
-  margin-right: 1rem;
-}
-
-a.frame__demo--current {
-  border-color: transparent;
-  color: var(--color-text);
-}
-
 main {
   /* background-color: var(--section-bg-color); */
   background: linear-gradient(91.9deg, #c9ffff 0.11%, #ffe4f9 100%);
+  padding: 0 0 10rem 0;
+}
+
+main .footer-pic {
+  bottom: -8.8%;
+  z-index: 1;
 }
 
 .container {
@@ -72,7 +57,7 @@ main {
 }
 
 .menu {
-  padding: 5rem 0;
+  padding: 5rem 0 10rem 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -91,6 +76,10 @@ main {
   font-size: 6rem;
   font-weight: 800;
   padding: 0.5rem 0;
+}
+
+.menu a div {
+  overflow: hidden;
 }
 
 .menu a span {
@@ -178,4 +167,9 @@ main {
 .hover-reveal__img {
   background-size: cover;
   background-position: 50% 50%;
+}
+
+/* footer */
+footer {
+  border-top: 2px dashed violet;
 }

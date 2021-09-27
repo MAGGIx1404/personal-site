@@ -17,8 +17,9 @@ import LocomotiveScroll from "locomotive-scroll";
 
 // menu (<nav> element)
 const menuEl = document.querySelector(".menu");
+const menu__item = document.querySelectorAll(".menu__item");
 // preload the images set as data attrs in the menu items
-preloader(".menu__item").then(() => {
+preloader("menu__item").then(() => {
   const scroll = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true,
@@ -39,8 +40,16 @@ TweenMax.to(".overlay-1-2", 1, {
   ease: Expo.easeInOut,
 });
 
+TweenMax.from("span", 2, {
+  delay: 0.2,
+  opacity: 0,
+  y: "100%",
+  ease: Expo.easeInOut,
+});
+
 // reverse transition of pages
 
+const span_all = document.querySelectorAll("span");
 const anchors = document.querySelectorAll(".transition-btn");
 
 for (let i = 0; i < anchors.length; i++) {
@@ -54,20 +63,27 @@ for (let i = 0; i < anchors.length; i++) {
       target = target.parentElement.href;
     }
 
+    TweenLite.to(span_all, 1, {
+      opacity: 0,
+      y: "100%",
+      ease: Expo.easeInOut,
+    });
+
     TweenLite.to(".overlay-1-1", 1, {
       left: 0,
-      delay: 0.4,
+      delay: 1,
       ease: Expo.easeInOut,
     });
 
     TweenLite.to(".overlay-1-2", 1, {
       left: 0,
+      delay: 0.6,
       ease: Expo.easeInOut,
     });
 
     setTimeout(() => {
       window.location.href = target;
-    }, 2000);
+    }, 3000);
   });
 }
 
