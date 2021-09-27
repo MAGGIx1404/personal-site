@@ -19,6 +19,8 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "gsap": "^3.7.1",
+    "imagesloaded": "^4.1.4",
+    "locomotive-scroll": "^4.1.2",
     "parallax-js": "^3.1.0",
     "three": "^0.132.2"
   }

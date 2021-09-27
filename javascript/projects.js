@@ -11,7 +11,23 @@ import {
   EasePack,
   Expo,
 } from "gsap/all";
+import Menu from "./menu";
+import { preloader } from "./preloader";
+import LocomotiveScroll from "locomotive-scroll";
 
+// menu (<nav> element)
+const menuEl = document.querySelector(".menu");
+// preload the images set as data attrs in the menu items
+preloader(".menu__item").then(() => {
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+  });
+  // initialize menu
+  new Menu(menuEl);
+});
+
+// overlay animation
 TweenMax.to(".overlay-1-1", 1, {
   left: "-100%",
   ease: Expo.easeInOut,
@@ -54,3 +70,72 @@ for (let i = 0; i < anchors.length; i++) {
     }, 2000);
   });
 }
+
+// // nav flexibility
+// const nav = document.getElementById("nav");
+
+// window.addEventListener("scroll", function () {
+//   if (window.pageYOffset > 100) {
+//     nav.classList.add("active");
+//   } else {
+//     nav.classList.remove("active");
+//   }
+// });
+
+// smooth scroll
+// gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+// let container = document.querySelector("#scroll-container");
+
+// let height;
+// function setHeight() {
+//   height = container.clientHeight;
+//   document.body.style.height = height + "px";
+// }
+// ScrollTrigger.addEventListener("refreshInit", setHeight);
+
+// // smooth scrolling container
+// gsap.to(container, {
+//   y: () => -(height - document.documentElement.clientHeight),
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: document.body,
+//     start: "top top",
+//     end: "bottom bottom",
+//     scrub: 1,
+//     invalidateOnRefresh: true,
+//   },
+// });
+
+// // nav btns initialize for smooth transition
+
+// var btn_nav = document.querySelectorAll(".top-btn");
+
+// function setupLinks(scroller) {
+//   let linkElements = gsap.utils.toArray(btn_nav),
+//     linkTargets = linkElements.map((e) =>
+//       document.querySelector(e.getAttribute("href"))
+//     ),
+//     linkPositions = [],
+//     calculatePositions = () => {
+//       let offset = gsap.getProperty(scroller, "y");
+//       linkTargets.forEach(
+//         (e, i) => (linkPositions[i] = e.getBoundingClientRect().top - offset)
+//       );
+//     };
+
+//   linkElements.forEach((element, i) => {
+//     element.addEventListener("click", (e) => {
+//       e.preventDefault();
+//       gsap.to(window, {
+//         scrollTo: linkPositions[i],
+//         ease: "power4",
+//         overwrite: true,
+//       });
+//     });
+//   });
+
+//   ScrollTrigger.addEventListener("refresh", calculatePositions);
+// }
+
+// setupLinks(container);
