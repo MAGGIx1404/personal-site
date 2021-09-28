@@ -107,4 +107,131 @@
   .container {
     max-width: 800px !important;
   }
+  footer .rocket-6 {
+    right: -40% !important;
+  }
+  footer .rocket-5 {
+    left: -40% !important;
+  }
+  .contact-section .horse {
+    width: 9rem;
+    top: -38% !important;
+  }
+  .contact-section .trade {
+    width: 10rem !important;
+  }
+  .project-section .laptop {
+    left: 15% !important;
+  }
+  .about .shape-2 {
+    display: none;
+  }
+  :root {
+    --font-xxl-h1: 2rem !important;
+  }
+  .banner .rocket-container-1 {
+    top: -15% !important;
+  }
+  .about .about-pic .about-img {
+    height: 20rem !important;
+  }
+  .about .about-pic .img-box {
+    padding: 0 2rem !important;
+  }
+  .about .about-pic {
+    height: 22rem !important;
+  }
+  .about .about-pic .about-dog {
+    top: -29% !important;
+  }
+  .about .shape-1 {
+    bottom: 5% !important;
+  }
+  .contact-section p {
+    margin: 2rem 0 !important;
+  }
+  .paragraph {
+    overflow: visible !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    max-width: 600px !important;
+  }
+  .contact-section .horse {
+    top: -35% !important;
+  }
+  .contact-section .touch {
+    width: 8rem !important ;
+  }
+  .footer .rocket-6 {
+    right: -70% !important;
+  }
+  .footer .rocket-5 {
+    left: -70% !important;
+  }
+  .project-section .row .project-card {
+    flex: 80% !important;
+    max-width: 80% !important;
+  }
+  .project-section .laptop {
+    width: 8rem !important;
+    left: 12% !important;
+    top: -4% !important;
+  }
+  .info-section .row .tools {
+    flex: 80% !important;
+    max-width: 80% !important;
+    height: 30rem !important;
+    margin-top: 1rem !important;
+  }
+  .info-section .row .tools:nth-of-type(1) {
+    height: 20rem !important;
+  }
+  .info-section {
+    min-height: 150vh !important;
+  }
+  .about .about-content {
+    padding: 5rem 0 2rem 0 !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  .about .about-pic {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    height: 24rem !important;
+  }
+  .about .row {
+    flex-wrap: wrap-reverse !important;
+    margin-top: 2rem !important;
+  }
+  .about .shape-1 {
+    display: none !important;
+  }
+  .about .about-pic .about-dog {
+    display: none !important;
+  }
+  .about .rocket-2 {
+    display: none !important;
+  }
+  .about .about-content p {
+    width: 100% !important;
+  }
+  .info-section .row .tools .tools-inner .list .item {
+    padding: 0.4rem 0 !important;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  nav .nav-btns,
+  nav .contact-btn {
+    display: none !important;
+  }
+  nav.active {
+    padding: 1.8rem 0 !important;
+  }
+  .hamb {
+    display: flex !important;
+  }
 }

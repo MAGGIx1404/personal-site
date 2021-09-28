@@ -206,3 +206,15 @@ gsap.utils.toArray(".revealUp").forEach(function (elem) {
     },
   });
 });
+
+// hamburger
+
+const hamb_btn = document.getElementById("hamb");
+const drop_down = document.getElementById("drop-down");
+
+hamb_btn.addEventListener("click", function () {
+  hamb_btn.classList.toggle("active");
+  drop_down.classList.toggle("active");
+});
+
+export default drop_down;
