@@ -1,0 +1,64 @@
+/* banner */
+
+nav,
+nav.active {
+  background-color: var(--section-bg-color);
+}
+
+.site-banner {
+  width: 100%;
+  background: url(../images/projects/project-1/banner.png) no-repeat
+    var(--section-bg-color);
+  background-position: center;
+  background-size: contain;
+  background-blend-mode: color-burn;
+}
+
+.site-banner .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.site-banner h1 div {
+  overflow: hidden;
+}
+
+.site-banner h1 div span {
+  font-size: 8rem;
+  font-weight: 700;
+}
+
+/* site-info */
+.site-info {
+  width: 100%;
+  padding: 5rem 0;
+}
+
+.site-info .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  /* border: 10px solid var(--section-bg-color); */
+  padding: 4rem 0;
+  background: linear-gradient(94.33deg, #e9e4ff 0.58%, #ffeccb 100%);
+}
+
+.site-info p {
+  width: 80%;
+  margin: 1rem 0;
+}
+
+.preview-section {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+/* slider */

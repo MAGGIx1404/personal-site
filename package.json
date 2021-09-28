@@ -22,6 +22,7 @@
     "imagesloaded": "^4.1.4",
     "locomotive-scroll": "^4.1.2",
     "parallax-js": "^3.1.0",
+    "swiper": "^7.0.6",
     "three": "^0.132.2"
   }
 }

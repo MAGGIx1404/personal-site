@@ -226,6 +226,11 @@ ul {
   height: fit-content;
 }
 
+.fixed-section {
+  height: 100vh;
+  max-height: 100vh;
+}
+
 /* navbar big screen */
 
 nav {
