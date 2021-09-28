@@ -56,9 +56,159 @@ nav.active {
   margin: 1rem 0;
 }
 
+/* preview-setion */
+
 .preview-section {
   text-align: center;
   padding: 3rem 0;
 }
 
-/* slider */
+/* preview slide */
+
+/*** layout ***/
+
+.flex-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flexbox;
+  display: -moz-flex;
+  display: -o-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.landscape-wrapper {
+  position: relative;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 66.6%;
+}
+
+.landscape-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#page-wrap {
+  position: relative;
+}
+
+/*** canvas ***/
+
+#canvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  opacity: 0;
+
+  transition: opacity 0.5s ease-in;
+}
+
+.planes-loaded #canvas {
+  opacity: 1;
+}
+
+/*** content ***/
+
+#content {
+  position: relative;
+  z-index: 15;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+#planes {
+  overflow: hidden;
+  opacity: 0;
+  position: relative;
+  transition: opacity 0.5s ease-in;
+  padding: 3rem 0;
+  z-index: 2;
+}
+
+.planes-loaded #planes {
+  opacity: 1;
+}
+
+.plane-wrapper {
+  width: 46%;
+  float: left;
+  position: relative;
+  margin: 0.3rem;
+}
+
+.plane-inner {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.plane {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: inset 0 0 10px #dddddd;
+  z-index: 2;
+}
+
+.plane img {
+  display: none;
+}
+
+/*** handling errors ***/
+
+.no-curtains .plane-title {
+  z-index: 1;
+}
+
+.no-curtains .plane img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+}
+
+@media screen and (max-width: 1320px) {
+  #content {
+    margin: 0 20px;
+  }
+
+  .plane-inner {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #content {
+    margin: 0 10px;
+  }
+
+  .plane-wrapper {
+    width: 100%;
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  .plane-inner {
+    padding: 10px;
+  }
+}
