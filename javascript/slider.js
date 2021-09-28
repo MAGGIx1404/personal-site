@@ -25,10 +25,10 @@ window.addEventListener("load", () => {
       delta.y = -delta.y;
 
       // threshold
-      if (delta.y > 60) {
-        delta.y = 60;
-      } else if (delta.y < -60) {
-        delta.y = -60;
+      if (delta.y > 80) {
+        delta.y = 80;
+      } else if (delta.y < -80) {
+        delta.y = -80;
       }
 
       if (Math.abs(delta.y) > Math.abs(planesDeformations)) {

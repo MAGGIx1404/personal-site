@@ -11,7 +11,6 @@ import {
   EasePack,
   Expo,
 } from "gsap/all";
-
 // nav flexibility
 const nav = document.getElementById("nav");
 
@@ -80,3 +79,60 @@ window.addEventListener("scroll", function () {
 // }
 
 // setupLinks(container);
+
+// overlay animation
+
+TweenMax.to(".overlay-s1", 1, {
+  x: "-100%",
+  ease: Expo.easeInout,
+});
+
+TweenMax.to(".overlay-s2", 1, {
+  x: "-100%",
+  delay: 0.4,
+  ease: Expo.easeInout,
+});
+
+TweenMax.from(".site-heading", 1, {
+  y: 120,
+  delay: 0.8,
+  ease: Expo.easeInout,
+});
+
+// after overlay effect
+const anchors = document.querySelectorAll(".transition-btn");
+
+for (let i = 0; i < anchors.length; i++) {
+  const anchor = anchors[i];
+
+  anchor.addEventListener("click", (e) => {
+    e.preventDefault();
+    let target = e.target;
+
+    if (target.nodeName === "SPAN") {
+      target = target.parentElement.href;
+    }
+
+    TweenMax.to(".overlay-s1", 1, {
+      x: 0,
+      delay: 1,
+      ease: Expo.easeInOut,
+    });
+
+    TweenMax.to(".overlay-s2", 1, {
+      x: 0,
+      delay: 0.6,
+      ease: Expo.easeInOut,
+    });
+
+    TweenMax.to(".site-heading", 1, {
+      y: 120,
+      delay: 0.8,
+      ease: Expo.easeInout,
+    });
+
+    setTimeout(() => {
+      window.location.href = target;
+    }, 3000);
+  });
+}

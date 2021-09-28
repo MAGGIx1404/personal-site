@@ -1,7 +1,13 @@
+.main-btn,
+.next-btn div span {
+  z-index: 4;
+}
+
 /* banner */
 
 nav,
 nav.active {
+  z-index: 100;
   background-color: var(--section-bg-color);
 }
 
@@ -24,6 +30,10 @@ nav.active {
   overflow: hidden;
 }
 
+.site-banner h1 {
+  overflow: hidden;
+}
+
 .site-banner h1 div {
   overflow: hidden;
 }
@@ -31,6 +41,7 @@ nav.active {
 .site-banner h1 div span {
   font-size: 8rem;
   font-weight: 700;
+  line-height: 8rem;
 }
 
 /* site-info */
@@ -60,6 +71,7 @@ nav.active {
 
 .preview-section {
   text-align: center;
+  background: linear-gradient(94.33deg, #f3f0ff 0.58%, #fff2db 100%);
   padding: 3rem 0;
 }
 
@@ -113,7 +125,7 @@ nav.active {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: 3;
 
   opacity: 0;
 
@@ -142,6 +154,7 @@ nav.active {
   transition: opacity 0.5s ease-in;
   padding: 3rem 0;
   z-index: 2;
+  background: linear-gradient(94.33deg, #f3f0ff 0.58%, #fff2db 100%);
 }
 
 .planes-loaded #planes {
@@ -166,7 +179,7 @@ nav.active {
   right: 0;
   bottom: 0;
   left: 0;
-  box-shadow: inset 0 0 10px #dddddd;
+  /* box-shadow: inset 0 0 10px #dddddd; */
   z-index: 2;
 }
 
@@ -211,4 +224,75 @@ nav.active {
   .plane-inner {
     padding: 10px;
   }
+}
+
+/* next section */
+.next-section,
+.next-section .container {
+  padding: 4.4rem 0;
+  text-align: center;
+  background-color: var(--section-bg-color);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.next-section a {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 1rem;
+  color: var(--dark-violet-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.next-section a::after {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 4px;
+  transform: scaleX(0);
+  transform-origin: right;
+  background-color: var(--dark-violet-color);
+  content: "";
+  bottom: 0;
+  left: 0;
+  transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.next-section a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* footer */
+footer .footer-btn {
+  z-index: 3;
+}
+
+/* overlay */
+.overlay-s1 {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(91.9deg, #c9ffff 0.11%, #ffe4f9 100%);
+}
+
+.overlay-s2 {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: violet;
 }
