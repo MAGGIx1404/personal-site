@@ -41,7 +41,6 @@ nav.active {
 .site-banner h1 div span {
   font-size: 8rem;
   font-weight: 700;
-  line-height: 8rem;
 }
 
 /* site-info */
@@ -196,7 +195,7 @@ nav.active {
 .no-curtains .plane img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   border: 2px solid black;
 }
 

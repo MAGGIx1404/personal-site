@@ -1,0 +1,110 @@
+/* media quaries */
+
+@media only screen and (max-width: 1600px) {
+  .banner .rocket-container-1 {
+    top: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 1340px) {
+  .container {
+    max-width: 1200px !important;
+  }
+  .project-section .project-card {
+    height: 30rem;
+  }
+  .project-section .project-card .img-box {
+    height: 60%;
+  }
+  .project-section .laptop {
+    top: -10% !important;
+  }
+  .project-section .shape-3 {
+    display: none;
+  }
+  .project-section .shape-4 {
+    right: 1% !important;
+  }
+  .contact-section p {
+    margin: 2rem 0 4rem 0 !important;
+  }
+  .info-section .hippo {
+    display: none;
+  }
+  .about .shape-2 {
+    right: 1% !important;
+  }
+  .about .shape-1 {
+    left: 1% !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 1000px !important;
+  }
+  :root {
+    --font-xxl-h1: 2.5rem !important;
+    --font-pera-p: 1rem !important;
+  }
+  p {
+    line-height: 1.5 !important;
+  }
+  .banner .rocket-container-1 {
+    top: -5% !important;
+  }
+  .project-section .project-card .img-box {
+    height: 55% !important;
+  }
+  .project-section .project-card {
+    height: 25rem !important;
+  }
+  .contact-section .trade {
+    width: 12rem !important;
+  }
+  footer .rocket-5 {
+    left: -25% !important;
+  }
+  footer .rocket-6 {
+    right: -20% !important;
+  }
+  .about .about-pic .about-dog {
+    width: 10rem !important;
+    top: -23% !important;
+  }
+  .project-section .laptop {
+    left: 20% !important;
+  }
+  .contact-section .horse {
+    top: -35% !important;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .about .rocket-2 {
+    width: 80% !important;
+  }
+  .project-section .row .project-card {
+    flex: 0 0 60% !important;
+    max-width: 60% !important;
+    margin-top: 1rem !important;
+  }
+  .project-section .project-card .img-box {
+    height: 60% !important;
+  }
+  .project-section {
+    min-height: 200vh !important;
+  }
+  .project-section .row {
+    justify-content: center !important;
+  }
+  .project-section .laptop {
+    top: -5% !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    max-width: 800px !important;
+  }
+}
